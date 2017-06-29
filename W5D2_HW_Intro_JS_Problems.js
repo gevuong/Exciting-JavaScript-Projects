@@ -72,6 +72,7 @@ madLib('make', 'best', 'guac');
 // isSubstring
 function isSubstring(searchString, subString) {
   console.log(searchString.includes(subString));
+  // return searchString.includes(subString);
   // if (searchString.includes(subString)) {
   //   console.log(true)
   //   // return true
@@ -84,3 +85,37 @@ function isSubstring(searchString, subString) {
 
 isSubstring("time to program", "time");
 isSubstring("Jump for joy", "joys");
+
+
+// Phase 2 - JS Looping Constructs
+function fizzBuzz(array) {
+  let new_arr = [];
+  let i = 0;
+  while (i < array.length) {
+    if ((i % 3 === 0) ^ (i % 5 === 0)) {
+      new_arr.push(i);
+    }
+    i++;
+  }
+  console.log(new_arr);
+  // return new_arr;
+}
+
+fizzBuzz([2,3,4,5,6,7,8,9,10,11]);
+
+
+function isPrime(num) {
+  if (num < 2) { return false; }
+
+  for (let i = 2, i < num, i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+
+  return true;
+}
+isPrime(2)
+isPrime(10)
+isPrime(15485863)
+isPrime(3548563)
