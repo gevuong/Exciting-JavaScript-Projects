@@ -10,7 +10,7 @@ Array.prototype.myInject = function (callback) {
   return accum;
 };
 
-
+// callback function is defined as function(a,b) { return a + b }
 let test = [1,2,3,4].myInject(function(a, b) {
   return a + b;
 });
