@@ -36,6 +36,12 @@ console.log(myBsearch([1,2,3,4,5], 6)); // -1
 // jumbleSort("hello") => "ehllo"
 // jumbleSort("hello", ['o', 'l', 'h', 'e'])  // 'ollhe'
 
+let jumbleSort = (str, alpha = 'abcdefghijklmnopqrstuvwxyz') => {
+  return str.split("").sort((a,b) => alpha.indexOf(a) - alpha.indexOf(b)).join("");
+};
+
+console.log(jumbleSort("hello")); // ehllo
+console.log(jumbleSort("hello", ['o', 'l', 'h', 'e']));
 
 
 
